@@ -124,7 +124,11 @@ function InitialScript({ scriptOne, setScripts, scripts }) {
             }}
             className={styles["small-btn"]}
           >
-            <img className={styles["img"]} src="/del.png" alt="#" />
+            <img
+              className={styles["img"]}
+              src="/ScriptHelper2/del.png"
+              alt="#"
+            />
           </button>
           <p className={styles["script-name"]}>{scriptOne.name}</p>
           <div>
