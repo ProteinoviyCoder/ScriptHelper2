@@ -19,7 +19,7 @@ function InitialHeader({ headerPosition }) {
     {
       path: "setting",
       name: () => {
-        return <img src="/setting.png" alt="#"></img>;
+        return <img src="/ScriptHelper2/setting.png" alt="#"></img>;
       },
     },
   ]);

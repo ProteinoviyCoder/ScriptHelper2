@@ -12,7 +12,7 @@ function InitialPageGeneral() {
   const [showImgFull, setShowImgFull] = useState(false);
   const [missionComplete, setMissionComplete] = useState(false);
   const { showAlert, setShowAlert } = useMyContext();
-  const [audio, setAudio] = useState(new Audio("/gta.mp3"));
+  const [audio, setAudio] = useState(new Audio("/ScriptHelper2/gta.mp3"));
 
   const copyText = (text, name, e) => {
     if (showAlert.isVisible) {
@@ -130,7 +130,7 @@ function InitialPageGeneral() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/costs.png"
+                src="/ScriptHelper2/costs.png"
                 alt="#"
               />
               <img
@@ -139,7 +139,7 @@ function InitialPageGeneral() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/searchOfer.png"
+                src="/ScriptHelper2/searchOfer.png"
                 alt="#"
               />
               <img
@@ -148,7 +148,7 @@ function InitialPageGeneral() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/oferImg.png"
+                src="/ScriptHelper2/oferImg.png"
                 alt="#"
               />
             </div>
@@ -160,7 +160,7 @@ function InitialPageGeneral() {
           missionComplete ? "" : styles["none"]
         }`}
       >
-        <img src="/missionComplete.png" alt="#" />
+        <img src="/ScriptHelper2/missionComplete.png" alt="#" />
       </div>
     </Layout>
   );

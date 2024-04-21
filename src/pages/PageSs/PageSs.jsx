@@ -116,7 +116,7 @@ function InitialPageSs() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/ss-links1.png"
+                src="/ScriptHelper2/ss-links1.png"
                 alt="#"
               />
               <img
@@ -125,7 +125,7 @@ function InitialPageSs() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/ss-links2.png"
+                src="/ScriptHelper2/ss-links2.png"
                 alt="#"
               />
             </div>

@@ -111,7 +111,7 @@ function InitialPageCod() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/form.png"
+                src="/ScriptHelper2/form.png"
                 alt="#"
               />
               <img
@@ -120,7 +120,7 @@ function InitialPageCod() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/form2.png"
+                src="/ScriptHelper2/form2.png"
                 alt="#"
               />
             </div>
@@ -212,7 +212,7 @@ function InitialPageCod() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/inputs.png"
+                src="/ScriptHelper2/inputs.png"
                 alt="#"
               />
             </div>
@@ -293,7 +293,7 @@ function InitialPageCod() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/links1.png"
+                src="/ScriptHelper2/links1.png"
                 alt="#"
               />
               <img
@@ -302,7 +302,7 @@ function InitialPageCod() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/links2.png"
+                src="/ScriptHelper2/links2.png"
                 alt="#"
               />
             </div>

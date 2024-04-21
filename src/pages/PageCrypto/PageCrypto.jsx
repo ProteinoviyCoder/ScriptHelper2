@@ -105,7 +105,7 @@ function InitialPageCrypto() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/files1.png"
+                src="/ScriptHelper2/files1.png"
                 alt="#"
               />
               <img
@@ -114,7 +114,7 @@ function InitialPageCrypto() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/files2.png"
+                src="/ScriptHelper2/files2.png"
                 alt="#"
               />
             </div>
@@ -180,7 +180,7 @@ function InitialPageCrypto() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/macroses.png"
+                src="/ScriptHelper2/macroses.png"
                 alt="#"
               />
             </div>
@@ -204,7 +204,7 @@ function InitialPageCrypto() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="/zip1.png"
+                src="/ScriptHelper2/zip1.png"
                 alt="#"
               />
             </div>

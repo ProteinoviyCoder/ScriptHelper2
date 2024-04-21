@@ -39,7 +39,7 @@ function InitialSideBar() {
       >
         <img
           className={`${styles["img"]} ${isOpenSideBar ? styles["none"] : ""}`}
-          src="/note.png"
+          src="/ScriptHelper2/note.png"
           alt="#"
         />
         <i
