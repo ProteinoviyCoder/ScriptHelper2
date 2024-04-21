@@ -3,6 +3,7 @@ import { memo, useEffect, useRef, useState } from "react";
 import { Layout } from "../../components/Layout/Layout";
 import { useMyContext } from "../../context/MyContext/MyContext";
 import { Button } from "../../components/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 function InitialPageSetting() {
   const [isNotificationAllowed, setIsNotificationAllowed] = useState(false);
@@ -52,12 +53,15 @@ function InitialPageSetting() {
 
   const { timeNotif, setTimeNotif, setIsFirstRenderContext } = useMyContext();
 
+  const navigate = useNavigate();
+
   const deleteTime = (data) => {
     const copyTimeNotif = [...timeNotif];
     copyTimeNotif.splice(copyTimeNotif.indexOf(data), 1);
 
     setTimeNotif(copyTimeNotif);
     localStorage.setItem("timeNotif", JSON.stringify(copyTimeNotif));
+    navigate("/ScriptHelper2");
     window.location.reload();
   };
 
@@ -82,6 +86,7 @@ function InitialPageSetting() {
     localStorage.setItem("timeNotif", JSON.stringify(copyTimeNotif));
     setTimeNotif(copyTimeNotif);
     setShowModal(false);
+    navigate("/ScriptHelper2");
     window.location.reload();
   };
 
