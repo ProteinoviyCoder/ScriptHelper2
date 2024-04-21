@@ -71,7 +71,7 @@ function InitialPageCod() {
           <div className={styles["page-name"]}>
             <button
               onClick={() => {
-                navigate("/study");
+                navigate("/ScriptHelper2/study");
               }}
               className={styles["btn"]}
             >
@@ -111,7 +111,7 @@ function InitialPageCod() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/form.png"
+                src="/form.png"
                 alt="#"
               />
               <img
@@ -120,7 +120,7 @@ function InitialPageCod() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/form2.png"
+                src="/form2.png"
                 alt="#"
               />
             </div>
@@ -212,7 +212,7 @@ function InitialPageCod() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/inputs.png"
+                src="/inputs.png"
                 alt="#"
               />
             </div>
@@ -293,7 +293,7 @@ function InitialPageCod() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/links1.png"
+                src="/links1.png"
                 alt="#"
               />
               <img
@@ -302,7 +302,7 @@ function InitialPageCod() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/links2.png"
+                src="/links2.png"
                 alt="#"
               />
             </div>

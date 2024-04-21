@@ -223,7 +223,7 @@ function InitialPageSetting() {
         </div>
       </main>
       <div className={`${styles["back-img"]} anim-open`}>
-        <img src="../../../public/setting.gif" alt="#" />
+        <img src="/setting.gif" alt="#" />
       </div>
     </Layout>
   );

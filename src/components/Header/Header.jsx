@@ -19,7 +19,7 @@ function InitialHeader({ headerPosition }) {
     {
       path: "setting",
       name: () => {
-        return <img src="../../../public/setting.png" alt="#"></img>;
+        return <img src="/setting.png" alt="#"></img>;
       },
     },
   ]);
@@ -29,9 +29,9 @@ function InitialHeader({ headerPosition }) {
 
   function selectActiveTab(elem) {
     if (elem.path.toLowerCase() === "scripts") {
-      navigate("/");
+      navigate("/ScriptHelper2");
     } else {
-      navigate(`/${elem.path.toLowerCase()}`);
+      navigate(`/ScriptHelper2/${elem.path.toLowerCase()}`);
     }
   }
 

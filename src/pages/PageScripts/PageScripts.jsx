@@ -261,7 +261,7 @@ function InitialPageScripts() {
       style={{ padding: "7px" }}
       onClick={() => removeLocaslScripts()}
     >
-      {<img src="../../../public/reload.png"></img>}
+      {<img src="/reload.png"></img>}
     </button>
   );
 

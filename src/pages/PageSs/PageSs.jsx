@@ -65,7 +65,7 @@ function InitialPageSs() {
           <div className={styles["page-name"]}>
             <button
               onClick={() => {
-                navigate("/study");
+                navigate("/ScriptHelper2/study");
               }}
               className={styles["btn"]}
             >
@@ -116,7 +116,7 @@ function InitialPageSs() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/ss-links1.png"
+                src="/ss-links1.png"
                 alt="#"
               />
               <img
@@ -125,7 +125,7 @@ function InitialPageSs() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/ss-links2.png"
+                src="/ss-links2.png"
                 alt="#"
               />
             </div>

@@ -12,7 +12,7 @@ function InitialPageGeneral() {
   const [showImgFull, setShowImgFull] = useState(false);
   const [missionComplete, setMissionComplete] = useState(false);
   const { showAlert, setShowAlert } = useMyContext();
-  const [audio, setAudio] = useState(new Audio("../../../public/gta.mp3"));
+  const [audio, setAudio] = useState(new Audio("/gta.mp3"));
 
   const copyText = (text, name, e) => {
     if (showAlert.isVisible) {
@@ -78,7 +78,7 @@ function InitialPageGeneral() {
           <div className={styles["page-name"]}>
             <button
               onClick={() => {
-                navigate("/study");
+                navigate("/ScriptHelper2/study");
               }}
               className={styles["btn"]}
             >
@@ -130,7 +130,7 @@ function InitialPageGeneral() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/costs.png"
+                src="/costs.png"
                 alt="#"
               />
               <img
@@ -139,7 +139,7 @@ function InitialPageGeneral() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/searchOfer.png"
+                src="/searchOfer.png"
                 alt="#"
               />
               <img
@@ -148,7 +148,7 @@ function InitialPageGeneral() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/oferImg.png"
+                src="/oferImg.png"
                 alt="#"
               />
             </div>
@@ -160,7 +160,7 @@ function InitialPageGeneral() {
           missionComplete ? "" : styles["none"]
         }`}
       >
-        <img src="../../../public/missionComplete.png" alt="#" />
+        <img src="/missionComplete.png" alt="#" />
       </div>
     </Layout>
   );

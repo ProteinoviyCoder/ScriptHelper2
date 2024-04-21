@@ -66,7 +66,7 @@ function InitialPageCrypto() {
           <div className={styles["page-name"]}>
             <button
               onClick={() => {
-                navigate("/study");
+                navigate("/ScriptHelper2/study");
               }}
               className={styles["btn"]}
             >
@@ -105,7 +105,7 @@ function InitialPageCrypto() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/files1.png"
+                src="/files1.png"
                 alt="#"
               />
               <img
@@ -114,7 +114,7 @@ function InitialPageCrypto() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/files2.png"
+                src="/files2.png"
                 alt="#"
               />
             </div>
@@ -180,7 +180,7 @@ function InitialPageCrypto() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/macroses.png"
+                src="/macroses.png"
                 alt="#"
               />
             </div>
@@ -204,7 +204,7 @@ function InitialPageCrypto() {
                   setSrsImg(e.target.src);
                 }}
                 className={styles["img"]}
-                src="../../../public/zip1.png"
+                src="/zip1.png"
                 alt="#"
               />
             </div>

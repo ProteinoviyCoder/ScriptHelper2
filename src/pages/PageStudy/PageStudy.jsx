@@ -14,7 +14,7 @@ function InitialPageStudy() {
   const navigate = useNavigate();
 
   const goNavigate = (name) => {
-    navigate(`/${name.toLowerCase()}`);
+    navigate(`/ScriptHelper2/${name.toLowerCase()}`);
   };
 
   return (
