@@ -1,0 +1,31 @@
+@keyframes animOpasity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.div {
+  position: fixed;
+  bottom: 70px;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  width: 300px;
+  padding: 5px 30px;
+  border-radius: 10px;
+  background: linear-gradient(to left, #2a034c 35%, #4333a7 120%);
+  color: white;
+  box-shadow: 0 0 7px 3px rgba(#b8b453, 0.3);
+  //   border: 1px solid white;
+  margin: 0 auto;
+  text-align: center;
+  animation: animOpasity 0.3s ease forwards;
+}
+
+.none {
+  display: none;
+}

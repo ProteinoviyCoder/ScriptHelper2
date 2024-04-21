@@ -1,0 +1,12 @@
+.footer {
+  padding: 10px;
+  background: linear-gradient(to left, #6e2ea5 40%, #4333a7 110%);
+  z-index: 10;
+
+  box-shadow: 0 0 7px 3px rgba(#000000, 0.4);
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

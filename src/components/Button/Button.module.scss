@@ -1,0 +1,92 @@
+@keyframes animBtn {
+  from {
+    left: -20%;
+    transform: scale(0.9) rotate(-25deg);
+    opacity: 0.1;
+  }
+
+  50% {
+    transform: scale(2) rotate(-50deg);
+    opacity: 0.3;
+  }
+
+  100% {
+    left: 120%;
+    transform: scale(0.9) rotate(-25deg);
+    opacity: 0.1;
+  }
+}
+
+.animClick {
+  transform: scale(0.95) !important;
+}
+
+.button {
+  //   background: linear-gradient(350deg, #c057a3 30%, #d6d160 110%);
+  background: linear-gradient(350deg, #aa2a87 30%, #b8b22e 110%);
+  font-weight: 700;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 10px;
+  transition: 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+  min-width: 200px;
+  min-height: 50px;
+
+  &:hover {
+    transform: scale(1.03);
+    transition: 0.4s ease;
+    box-shadow: 0 0 7px 3px rgba(#6e2ea5, 0.2);
+    i {
+      animation: animBtn 0.5s ease-in-out forwards;
+    }
+  }
+
+  & i {
+    position: absolute;
+    top: -30%;
+    height: 170%;
+    width: 30px;
+    background-color: white;
+    transform: rotate(-25deg);
+    opacity: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 70px;
+    height: 100%;
+    width: 100%;
+    background-image: url("../../../public/houses.png");
+    background-size: cover;
+    background-repeat: repeat;
+    z-index: 1;
+    opacity: 0.7;
+    transform: scale(0.9);
+  }
+
+  div {
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 18px;
+
+    p {
+      text-shadow: 0 2px 5px black;
+    }
+  }
+}
