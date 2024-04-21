@@ -13,32 +13,32 @@ import { MyProvider, useMyContext } from "./context/MyContext/MyContext.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/ScriptHelper2",
     element: <PageScripts />,
     errorElement: <div>404 not found this page</div>,
   },
   {
-    path: "/cod",
+    path: "/ScriptHelper2/cod",
     element: <PageCod />,
   },
   {
-    path: "/ss",
+    path: "/ScriptHelper2/ss",
     element: <PageSs />,
   },
   {
-    path: "/crypto",
+    path: "/ScriptHelper2/crypto",
     element: <PageCrypto />,
   },
   {
-    path: "/study",
+    path: "/ScriptHelper2/study",
     element: <PageStudy />,
   },
   {
-    path: "/setting",
+    path: "/ScriptHelper2/setting",
     element: <PageSetting />,
   },
   {
-    path: "/general",
+    path: "/ScriptHelper2/general",
     element: <PageGeneral />,
   },
 ]);
