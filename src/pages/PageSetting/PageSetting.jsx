@@ -24,8 +24,9 @@ function InitialPageSetting() {
     } else if (!isNotificationAllowed) {
       return (
         <button
-          onClick={() => {
+          onClick={async () => {
             setIsNotificationAllowed(true);
+            const browserAllowed = await Notification.requestPermission();
           }}
           className={styles["btn-true"]}
         >
@@ -185,9 +186,13 @@ function InitialPageSetting() {
                   className={styles["checkbox"]}
                   type="checkbox"
                   checked={isNotificationAllowed ? true : false}
-                  onChange={() =>
-                    setIsNotificationAllowed(!isNotificationAllowed)
-                  }
+                  onChange={async () => {
+                    setIsNotificationAllowed(!isNotificationAllowed);
+                    if (isNotificationAllowed) {
+                      const browserAllowed =
+                        await Notification.requestPermission();
+                    }
+                  }}
                 />
               </div>
               {btnAllowed()}
