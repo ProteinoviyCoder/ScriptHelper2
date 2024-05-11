@@ -36,16 +36,22 @@ function InitialHeader({ headerPosition }) {
   }
 
   function highlightTab(elem) {
-    if (location.pathname === "/" && elem.path.toLowerCase() === "scripts") {
+    if (
+      location.pathname === "/ScriptHelper2" &&
+      elem.path.toLowerCase() === "scripts"
+    ) {
       return styles["nav-item-active"];
-    } else if (location.pathname === `/${elem.path}`) {
+    } else if (location.pathname === `/ScriptHelper2/${elem.path}`) {
       return styles["nav-item-active"];
     } else if (
-      (location.pathname === "/cod" && elem.path.toLowerCase() === "study") ||
-      (location.pathname === "/ss" && elem.path.toLowerCase() === "study") ||
-      (location.pathname === "/crypto" &&
+      (location.pathname === "/ScriptHelper2/cod" &&
         elem.path.toLowerCase() === "study") ||
-      (location.pathname === "/general" && elem.path.toLowerCase() === "study")
+      (location.pathname === "/ScriptHelper2/ss" &&
+        elem.path.toLowerCase() === "study") ||
+      (location.pathname === "/ScriptHelper2/crypto" &&
+        elem.path.toLowerCase() === "study") ||
+      (location.pathname === "/ScriptHelper2/general" &&
+        elem.path.toLowerCase() === "study")
     ) {
       return styles["nav-item-active"];
     } else {
