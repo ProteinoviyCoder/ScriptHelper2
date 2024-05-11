@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -37,8 +37,10 @@ function InitialHeader({ headerPosition }) {
 
   function highlightTab(elem) {
     if (
-      location.pathname === "/ScriptHelper2" &&
-      elem.path.toLowerCase() === "scripts"
+      (location.pathname === "/ScriptHelper2" &&
+        elem.path.toLowerCase() === "scripts") ||
+      (location.pathname === "/ScriptHelper2/" &&
+        elem.path.toLowerCase() === "scripts")
     ) {
       return styles["nav-item-active"];
     } else if (location.pathname === `/ScriptHelper2/${elem.path}`) {
