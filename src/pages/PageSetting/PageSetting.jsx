@@ -197,7 +197,11 @@ function InitialPageSetting() {
               </div>
               {btnAllowed()}
             </div>
-            <div className={styles["div-times"]}>
+            <div
+              className={`${styles["div-times"]} ${
+                isNotificationAllowed ? "" : styles["none"]
+              }`}
+            >
               {timeNotif === null
                 ? ""
                 : timeNotif.map((elem) => {
