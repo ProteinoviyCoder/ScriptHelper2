@@ -250,6 +250,8 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
 
   .btn-up {
     cursor: pointer;
@@ -259,6 +261,7 @@
     transition: 0.4s ease;
     border: none;
     border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 24px;
 
     @media (hover: hover) {
       &:hover {

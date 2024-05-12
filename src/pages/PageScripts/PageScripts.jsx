@@ -405,6 +405,16 @@ function InitialPageScripts() {
               </div>
               <div className={styles["div-btn-up"]}>
                 <button
+                  style={{ padding: "10px 17px" }}
+                  onClick={() => {
+                    setBtnContentModalWindow("add");
+                    setShowModal(true);
+                  }}
+                  className={styles["btn-up"]}
+                >
+                  +
+                </button>
+                <button
                   onClick={() => showPersonalScripts()}
                   className={styles["btn-up"]}
                 >
