@@ -77,6 +77,10 @@ function InitialAddScript({ setShowModal, setScripts }) {
     <div className={styles["content_add-script"]}>
       <p className={styles["title"]}>Добавить свой скрипт</p>
       <p className={styles["hint"]}>*** - обязательные поля</p>
+      <p className={styles["hint"]} style={{ marginTop: 5, marginBottom: 10 }}>
+        :;: - можно прописать в тексте для переноса на след. строку(только
+        описание)
+      </p>
 
       <div className={styles["inputs__add-script"]}>
         <input

@@ -3,7 +3,18 @@ import { Button } from "../Button/Button";
 import { memo, useEffect, useRef, useState } from "react";
 import { useMyContext } from "../../context/MyContext/MyContext";
 
-function InitialScript({ scriptOne, setScripts, scripts }) {
+function InitialScript({
+  scriptOne,
+  setScripts,
+  scripts,
+  showModal,
+  setShowModal,
+  setBtnContentModalWindow,
+  setDataOfScript,
+  setVersionDataOfScript,
+  scriptGroup,
+  setWhatIsScriptGroup,
+}) {
   const { showAlert, setShowAlert } = useMyContext();
 
   const [version, setVersion] = useState(1);
@@ -84,7 +95,7 @@ function InitialScript({ scriptOne, setScripts, scripts }) {
   const splitString = (data) => {
     const arr = [];
     let count = 0;
-    const dataArray = data.split("\n");
+    const dataArray = data.split(/\n|:;:/);
 
     dataArray.forEach((i) => {
       arr.push({ id: count, text: i });
@@ -117,19 +128,37 @@ function InitialScript({ scriptOne, setScripts, scripts }) {
     <div className={styles["div-script"]}>
       <div className={styles["script"]}>
         <div className={styles["script-top"]}>
-          <button
-            title="Двойный клик, чтобы удалить"
-            onDoubleClick={() => {
-              removeScript();
-            }}
-            className={styles["small-btn"]}
-          >
-            <img
-              className={styles["img"]}
-              src="/ScriptHelper2/del.png"
-              alt="#"
-            />
-          </button>
+          <div className={styles["div__small-btn"]}>
+            <button
+              title="Двойный клик, чтобы удалить"
+              onDoubleClick={() => {
+                removeScript();
+              }}
+              className={styles["small-btn"]}
+            >
+              <img
+                className={styles["img"]}
+                src="/ScriptHelper2/del.png"
+                alt="#"
+              />
+            </button>
+            <button
+              onClick={() => {
+                setBtnContentModalWindow("change");
+                setVersionDataOfScript(version);
+                setWhatIsScriptGroup(scriptGroup);
+                setDataOfScript(scriptOne);
+                setShowModal(true);
+              }}
+              className={styles["small-btn-change"]}
+            >
+              <img
+                className={styles["img"]}
+                src="/ScriptHelper2/change.png"
+                alt="#"
+              />
+            </button>
+          </div>
           <p className={styles["script-name"]}>{scriptOne.name}</p>
           <div>
             <svg

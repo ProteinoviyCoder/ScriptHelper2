@@ -18,10 +18,12 @@
   border-radius: 10px;
   min-width: 70%;
   max-width: 85%;
+  max-height: 90%;
   cursor: default;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: auto;
 
   .title__modal {
     font-size: 32px;
@@ -32,6 +34,19 @@
     color: transparent;
     font-family: Arial, Helvetica, sans-serif;
   }
+}
+
+.modal-window::-webkit-scrollbar {
+  background-color: #6e2ea5;
+  width: 5px;
+  border-radius: 10px;
+}
+.modal-window::-webkit-scrollbar-button {
+  height: 0px;
+}
+.modal-window::-webkit-scrollbar-thumb {
+  background-color: #1b0131;
+  border-radius: 10px;
 }
 
 .none {

@@ -3,6 +3,7 @@ import { Layout } from "../../components/Layout/Layout";
 import { Script } from "../../components/Script/Script";
 import { Alert } from "../../components/Alert/Alert";
 import { AddScript } from "../../components/AddScript/AddScript";
+import { ChangeScript } from "../../components/ChangeScript/ChangeScript";
 import { SideBar } from "../../components/SideBar/SideBar";
 import { memo, useEffect, useRef, useState } from "react";
 
@@ -14,7 +15,7 @@ function InitialPageScripts() {
         {
           v: 1,
           description:
-            "Скрипт валидация на jQuery: \n .\n Тегу <input> для имени, прописываем класс class='ss' \n Тегу <input> для телефона, прописываем класс class='pp'",
+            "Скрипт валидация на jQuery: \n . :;: \n Тегу <input> для имени, прописываем класс class='ss' \n :;: \n Тегу <input> для телефона, прописываем класс class='pp'",
           buttons: [
             {
               buttonText: "Получить Script",
@@ -31,7 +32,7 @@ function InitialPageScripts() {
         {
           v: 2,
           description:
-            "Скрипт валидация на jQuery с авто-вводом кода телефона: \n . \n Тегу <input> для имени, прописываем класс class='ss' \n Тегу <input> для телефона, прописываем класс class='pp' \n Меняем в скрипте +90 на нужное значение",
+            "Скрипт валидация на jQuery с авто-вводом кода телефона: \n . :;: \n Тегу <input> для имени, прописываем класс class='ss' \n :;: \n Тегу <input> для телефона, прописываем класс class='pp' \n . :;: \n Меняем в скрипте +90 на нужное значение",
           buttons: [
             {
               buttonText: "Получить Script",
@@ -55,7 +56,7 @@ function InitialPageScripts() {
         {
           v: 1,
           description:
-            "Скрипт на скролл с jQuery: \n . \n Последнему тегу <form> прописываем id='form-wrap' \n Всем тегам <a> прописываем href='#form-wrap'",
+            "Скрипт на скролл с jQuery: \n . :;: \n Последнему тегу <form> прописываем id='form-wrap' \n :;: \n Всем тегам <a> прописываем href='#form-wrap'",
           buttons: [
             {
               buttonText: "Получить Script",
@@ -100,7 +101,7 @@ function InitialPageScripts() {
         {
           v: 1,
           description:
-            "Скрипт ванила JS на текущую дату, в формате '24.03.2024': \n . \n Внутрь всех элементов с классом 'date-now' будет вписана текущая дата в формате '24.03.2024'",
+            "Скрипт ванила JS на текущую дату, в формате '24.03.2024': \n . :;: \n Внутрь всех элементов с классом 'date-now' будет вписана текущая дата в формате '24.03.2024'",
           buttons: [
             {
               buttonText: "Получить Script",
@@ -112,7 +113,7 @@ function InitialPageScripts() {
         {
           v: 2,
           description:
-            "Скрипт ванила JS на текущую дату, в формате 'January 22, 2024': \n . \n Внутрь всех элементов с классом 'date-now' будет вписана текущая дата в формате 'January 22, 2024'",
+            "Скрипт ванила JS на текущую дату, в формате 'January 22, 2024': \n . :;: \n Внутрь всех элементов с классом 'date-now' будет вписана текущая дата в формате 'January 22, 2024'",
           buttons: [
             {
               buttonText: "Получить Script",
@@ -124,7 +125,7 @@ function InitialPageScripts() {
         {
           v: 3,
           description:
-            "Скрипт ванила JS на текущую и предыдущие даты, в формате '24.03.2024': \n . \n Внутрь всех элементов с соответствующим классом будет вставлена соответствующая дата в формате '24.03.2024' \n . \n 'date-0' - текущая дата \n 'date-1' - вчерашняя дата \n 'date-2' - позавчерашняя дата \n 'date-3' - поза-позавчерашняя дата",
+            "Скрипт ванила JS на текущую и предыдущие даты, в формате '24.03.2024': \n . :;: \n Внутрь всех элементов с соответствующим классом будет вставлена соответствующая дата в формате '24.03.2024' \n . :;: \n 'date-0' - текущая дата \n :;: \n 'date-1' - вчерашняя дата \n :;: \n 'date-2' - позавчерашняя дата \n :;: \n 'date-3' - поза-позавчерашняя дата",
           buttons: [
             {
               buttonText: "Получить Script",
@@ -174,6 +175,10 @@ function InitialPageScripts() {
     },
   ];
 
+  const [whatIsScriptGroup, setWhatIsScriptGroup] = useState("");
+  const [dataOfScript, setDataOfScript] = useState("");
+  const [versionDataOfScript, setVersionDataOfScript] = useState("");
+  const [btnContentModalWindow, setBtnContentModalWindow] = useState("add");
   const [scripts, setScripts] = useState(originalScripts);
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [alertData, setAlertData] = useState({
@@ -293,6 +298,7 @@ function InitialPageScripts() {
         <button
           title="Добавить свой скрипт"
           onClick={() => {
+            setBtnContentModalWindow("add");
             setShowModal(true);
           }}
           className={`${styles["btn-layout"]}`}
@@ -323,6 +329,13 @@ function InitialPageScripts() {
                     alertData={alertData}
                     setScripts={setPersonalScripts}
                     scripts={personalScripts}
+                    showModal={showModal}
+                    setShowModal={setShowModal}
+                    setBtnContentModalWindow={setBtnContentModalWindow}
+                    setDataOfScript={setDataOfScript}
+                    setVersionDataOfScript={setVersionDataOfScript}
+                    scriptGroup={"personal"}
+                    setWhatIsScriptGroup={setWhatIsScriptGroup}
                   ></Script>
                 </li>
               );
@@ -352,10 +365,21 @@ function InitialPageScripts() {
       showModal={showModal}
       setShowModal={setShowModal}
       contentMidleModlaWindow={
-        <AddScript
-          setScripts={setPersonalScripts}
-          setShowModal={setShowModal}
-        ></AddScript>
+        btnContentModalWindow === "add" ? (
+          <AddScript
+            setScripts={setPersonalScripts}
+            setShowModal={setShowModal}
+          ></AddScript>
+        ) : (
+          <ChangeScript
+            setPersonalScripts={setPersonalScripts}
+            setGeneralScripts={setScripts}
+            setShowModal={setShowModal}
+            dataOfScript={dataOfScript}
+            versionDataOfScript={versionDataOfScript}
+            whatIsScriptGroup={whatIsScriptGroup}
+          ></ChangeScript>
+        )
       }
     >
       <SideBar></SideBar>
@@ -404,6 +428,13 @@ function InitialPageScripts() {
                       alertData={alertData}
                       setScripts={setScripts}
                       scripts={scripts}
+                      showModal={showModal}
+                      setShowModal={setShowModal}
+                      setBtnContentModalWindow={setBtnContentModalWindow}
+                      setDataOfScript={setDataOfScript}
+                      setVersionDataOfScript={setVersionDataOfScript}
+                      scriptGroup={"general"}
+                      setWhatIsScriptGroup={setWhatIsScriptGroup}
                     ></Script>
                   </li>
                 );

@@ -25,7 +25,7 @@ function InitialModalWindow({
   return (
     <div
       ref={refWindow}
-      onClick={(e) => closeWindow(e)}
+      onMouseDown={(e) => closeWindow(e)}
       className={` ${
         isVisibleWindow ? styles["background__modal-window"] : styles["none"]
       }`}
