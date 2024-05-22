@@ -2,12 +2,22 @@ import { memo, useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import { useLocation, useNavigate } from "react-router-dom";
 
-function InitialHeader({ headerPosition }) {
+function InitialHeader({
+  headerPosition,
+  setSwitchVisibleMobileList,
+  switchVisibleMobileList,
+}) {
   const [tabs, setTabs] = useState([
     {
       path: "scripts",
       name: () => {
         return "scripts";
+      },
+    },
+    {
+      path: "components",
+      name: () => {
+        return "components";
       },
     },
     {
@@ -76,6 +86,33 @@ function InitialHeader({ headerPosition }) {
                   {elem.name()}
                 </li>
               );
+            })}
+          </ul>
+          <ul className={styles["nav-list-mobile"]}>
+            <li
+              onClick={() => {
+                setSwitchVisibleMobileList(!switchVisibleMobileList);
+              }}
+              className={`${styles["nav-item"]} `}
+            >
+              <div className={styles["gamburger"]}>
+                <div className={styles["item__gamburger"]}></div>
+                <div className={styles["item__gamburger"]}></div>
+                <div className={styles["item__gamburger"]}></div>
+              </div>
+            </li>
+            {tabs.map((elem) => {
+              if (elem.path === "setting") {
+                return (
+                  <li
+                    onClick={() => selectActiveTab(elem)}
+                    className={`${styles["nav-item"]} ${highlightTab(elem)}`}
+                    key={elem.path}
+                  >
+                    {elem.name()}
+                  </li>
+                );
+              }
             })}
           </ul>
         </nav>

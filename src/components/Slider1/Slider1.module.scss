@@ -1,0 +1,117 @@
+// slider -----------------------------------------------------------------------
+
+.my-slider-841 {
+  width: 100% !important;
+  max-width: 1220px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 30px !important;
+  margin: 0 auto !important;
+
+  margin-bottom: 15px !important;
+}
+/* кнопка назад */
+.my-prev-btn-slider-841 {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  background-color: gray !important;
+  padding: 30px !important;
+  border-radius: 100px !important;
+  box-shadow: 0 0 5px 3px rgba(1, 1, 1, 0.2) !important;
+  transition: 0.4s ease !important;
+  cursor: pointer !important;
+}
+.my-prev-btn-slider-841:hover {
+  transform: scale(0.95) !important;
+  transition: 0.4s ease !important;
+  background-color: rgb(101, 101, 101) !important;
+}
+.my-prev-btn-slider-841 i {
+  width: 15px !important;
+  height: 15px !important;
+  border-top: 2px solid white !important;
+  border-left: 2px solid white !important;
+  transform: rotate(-45deg) !important;
+}
+
+/* Кнопка вперёд */
+.my-next-btn-slider-841 {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  background-color: gray !important;
+  padding: 30px !important;
+  border-radius: 100px !important;
+  box-shadow: 0 0 5px 3px rgba(1, 1, 1, 0.2) !important;
+  transition: 0.4s ease !important;
+  cursor: pointer !important;
+}
+.my-next-btn-slider-841:hover {
+  transform: scale(0.95) !important;
+  transition: 0.4s ease !important;
+  background-color: rgb(101, 101, 101) !important;
+}
+.my-next-btn-slider-841 i {
+  width: 15px !important;
+  height: 15px !important;
+  border-top: 2px solid white !important;
+  border-right: 2px solid white !important;
+  transform: rotate(45deg) !important;
+}
+
+/* Место под слайд */
+.my-content-slider-841 {
+  border: 1px solid gray !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 700px !important;
+  min-height: 250px !important;
+  max-height: 400px !important;
+  box-shadow: 0 0 5px 3px rgba(1, 1, 1, 0.2) !important;
+  border-radius: 10px !important;
+
+  display: flex !important;
+
+  overflow: hidden !important;
+}
+.my-slide-841 {
+  min-width: 100% !important;
+}
+
+@media (max-width: 500px) {
+  .my-next-btn-slider-841,
+  .my-prev-btn-slider-841 {
+    padding: 30px 10px !important;
+  }
+  .my-next-btn-slider-841 i {
+    width: 10px !important;
+    height: 10px !important;
+    margin-right: 3px;
+  }
+  .my-prev-btn-slider-841 i {
+    width: 10px !important;
+    height: 10px !important;
+    margin-left: 3px;
+  }
+  .my-slider-841 {
+    gap: 10px !important;
+  }
+  .my-content-slider-841 {
+    border: 1px solid gray !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 700px !important;
+    min-height: 180px !important;
+    max-height: 400px !important;
+    box-shadow: 0 0 5px 3px rgba(1, 1, 1, 0.2) !important;
+    border-radius: 10px !important;
+
+    display: flex !important;
+
+    overflow: hidden !important;
+  }
+}

@@ -89,3 +89,16 @@ main {
 .anim-open-window {
   animation: animOpenWindow 0.6s ease forwards;
 }
+
+@keyframes animOpen2 {
+  0% {
+    transform: rotateX(270deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+.anim-open2 {
+  animation: animOpen2 0.5s ease forwards;
+}

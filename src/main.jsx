@@ -10,6 +10,7 @@ import { PageGeneral } from "./pages/PageGeneral/PageGeneral.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MyProvider, useMyContext } from "./context/MyContext/MyContext.jsx";
+import { PageComponents } from "./pages/PageComponents/PageComponents.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/ScriptHelper2/general",
     element: <PageGeneral />,
+  },
+  {
+    path: "/ScriptHelper2/components",
+    element: <PageComponents />,
   },
 ]);
 

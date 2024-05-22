@@ -382,7 +382,6 @@ function InitialPageScripts() {
         )
       }
     >
-      <SideBar></SideBar>
       <main className={`${styles["main"]} anim-open`}>
         <div className="container">
           <div className={styles["scripts-container"]}>

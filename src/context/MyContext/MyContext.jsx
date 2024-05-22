@@ -18,6 +18,7 @@ export const MyProvider = ({ children }) => {
   };
   const [timeNotif, setTimeNotif] = useState(dataTimeNotif());
   const [isFirstRenderContext, setIsFirstRenderContext] = useState(true);
+  const [isOpenTimerTask, setIsOpenTimerTask] = useState(false);
   const contextValue = {
     showAlert,
     setShowAlert,
@@ -25,6 +26,8 @@ export const MyProvider = ({ children }) => {
     setTimeNotif,
     isFirstRenderContext,
     setIsFirstRenderContext,
+    isOpenTimerTask,
+    setIsOpenTimerTask,
   };
 
   async function notif() {

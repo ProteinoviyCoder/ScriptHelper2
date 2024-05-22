@@ -1,0 +1,196 @@
+// ----------------------------------- Примеры форм -----------------------------------
+
+.my-form-731 {
+  box-shadow: 0 0 20px 12px rgba(1, 1, 1, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 85px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 450px;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.my-product-img-731 {
+  width: 100%;
+  max-width: 120px;
+  transform: translateY(-90px);
+  margin-bottom: -90px !important;
+}
+.my-form-731 input {
+  width: 90% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-bottom: 2px solid rgb(67, 67, 67) !important;
+  border-radius: 10px !important;
+  font-size: 22px !important;
+  padding: 10px !important;
+  margin-bottom: 25px !important;
+  color: black !important;
+}
+.my-title-form-731 {
+  font-size: 28px;
+  font-weight: 500;
+  color: rgb(196, 40, 40);
+  margin: 0 !important;
+  padding: 0 !important;
+  margin-bottom: 15px !important;
+}
+.my-min-text-form-731 {
+  color: gray;
+  font-size: 12px;
+}
+.my-costs-731 {
+  font-size: 32px;
+  font-weight: 700;
+}
+.my-timer-now {
+  font-size: 32px;
+  margin: 0 !important;
+  padding: 0px !important;
+  margin-bottom: 10px !important;
+  margin-top: 10px !important;
+  font-weight: 700;
+  color: black;
+}
+.my-btn-submit-form-731 {
+  background: linear-gradient(
+    90deg,
+    #041e37 0,
+    rgba(9, 70, 121, 1) 35%,
+    #5181b0 100%
+  );
+  font-size: 24px;
+  color: white;
+  width: 90%;
+  padding: 10px 0;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.my-btn-submit-form-731:hover {
+  transform: scale(0.95);
+  transition: 0.3s ease;
+}
+.my-info-form-731 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ff9999;
+  font-size: 10px;
+  width: 90%;
+}
+.my-img-icon-form-731 {
+  width: 100% !important;
+  max-width: 36px !important;
+  transform: translateY(0px) !important;
+  margin-bottom: 0px !important;
+}
+.my-text-info-form-731 {
+  color: #ff9999;
+  font-size: 12px;
+}
+
+// -------------------------------------------- форма2 --------------------------------------------
+.my-form-732 {
+  margin: 15px auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 15px !important;
+  width: 100% !important;
+  max-width: 450px !important;
+  min-width: 200px !important;
+  padding: 35px 15px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 7px 5px rgba(1, 1, 1, 0.2) !important;
+
+  background-color: rgb(225, 237, 241) !important;
+}
+.my-input-form-732 {
+  padding: 7px 10px !important;
+  font-size: 22px !important;
+  border-radius: 5px !important;
+  width: 90% !important;
+  color: black !important;
+  border: 1px solid gray !important;
+  outline: none !important;
+}
+.my-input-form-732:focus {
+  box-shadow: 0 0 5px 3px rgba(56, 56, 56, 0.1) !important;
+  border: 1px solid rgb(35, 119, 229) !important;
+}
+.my-button-form-732 {
+  margin-top: 20px !important;
+  width: 80% !important;
+  padding: 17px 0 !important;
+  border-radius: 5px !important;
+  font-size: 26px !important;
+  font-weight: 500 !important;
+  color: white !important;
+  background-color: blueviolet !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: 0.5s ease !important;
+  box-shadow: 0 0 7px 5px rgba(1, 1, 1, 0.2) !important;
+}
+.my-button-form-732:hover {
+  transform: scale(0.96) !important;
+  transition: 0.5s ease !important;
+}
+
+// форм3 --------------------------------------------------------------------
+.my-form-733 {
+  margin: 15px auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 15px !important;
+  width: 100% !important;
+  max-width: 500px !important;
+  min-width: 200px !important;
+  padding: 35px 15px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 7px 5px rgba(1, 1, 1, 0.2) !important;
+
+  background-color: rgb(164, 164, 164) !important;
+}
+.my-input-form-733 {
+  padding: 7px 10px !important;
+  font-size: 22px !important;
+  border-radius: 5px !important;
+  width: 90% !important;
+  color: black !important;
+  border: 1px solid gray !important;
+  outline: none !important;
+}
+.my-input-form-733:focus {
+  box-shadow: 0 0 5px 3px rgba(56, 56, 56, 0.1) !important;
+  border: 1px solid rgb(35, 119, 229) !important;
+}
+.my-button-form-733 {
+  margin-top: 20px !important;
+  width: 80% !important;
+  padding: 17px 0 !important;
+  border-radius: 5px !important;
+  font-size: 26px !important;
+  font-weight: 500 !important;
+  color: white !important;
+  background-color: rgb(13, 13, 13) !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: 0.5s ease !important;
+  box-shadow: 0 0 7px 5px rgba(1, 1, 1, 0.2) !important;
+}
+.my-button-form-733:hover {
+  transform: scale(0.96) !important;
+  transition: 0.5s ease !important;
+}

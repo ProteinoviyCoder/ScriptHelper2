@@ -1,0 +1,158 @@
+.container-components {
+  margin: 0 auto;
+  width: 95%;
+  min-height: 300px;
+
+  display: grid;
+  grid-template-columns: minmax(200px, 210px) 4fr;
+
+  background: linear-gradient(
+    to left,
+    rgba(110, 46, 165, 0.1) 40%,
+    rgba(67, 51, 167, 0.1) 110%
+  );
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.names-components {
+  height: 100%;
+  border-right: 1px solid white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 10px;
+  padding-top: 30px;
+  overflow-y: auto;
+}
+
+.name-component {
+  width: 100%;
+  padding: 10px 5px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: 0.3s ease;
+}
+
+@media (hover: hover) {
+  .name-component:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+}
+
+.name-component-active {
+  background: linear-gradient(350deg, #aa2a87 30%, #b8b22e 110%);
+}
+
+.content-components {
+  max-height: 78dvh;
+  overflow-y: auto;
+}
+
+.content-components::-webkit-scrollbar {
+  width: 7px;
+  background-color: transparent;
+  border-radius: 100px;
+}
+.content-components::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 100px;
+}
+
+.div-components-forms,
+.div-components-sliders {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 35px;
+}
+.div-components-forms-item {
+  width: 100%;
+  max-width: 450px;
+  background: linear-gradient(
+    to left,
+    rgba(110, 46, 165, 0.8) 40%,
+    rgba(67, 51, 167, 0.9) 110%
+  );
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1px solid white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 0 auto;
+}
+
+.div-components-sliders-item {
+  width: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(110, 46, 165, 0.8) 40%,
+    rgba(67, 51, 167, 0.9) 110%
+  );
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1px solid white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 0 auto;
+}
+
+@media (max-width: 740px) {
+  .container-components {
+    grid-template-columns: 1fr;
+  }
+  .names-components {
+    height: 60px;
+    border-right: none;
+    border-bottom: 1px solid white;
+
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 10px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 25px;
+  }
+  .names-components::-webkit-scrollbar {
+    height: 5px;
+    background-color: white;
+  }
+  .names-components::-webkit-scrollbar-thumb {
+    height: 5px;
+    background-color: #ff9999;
+    border-radius: 100px;
+  }
+  .name-component {
+    width: 100%;
+    min-width: 200px;
+    padding: 10px 5px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 15px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: 0.3s ease;
+  }
+  .div-components-sliders-item {
+    padding: 10px;
+  }
+}

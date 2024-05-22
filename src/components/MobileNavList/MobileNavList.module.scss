@@ -1,0 +1,79 @@
+@keyframes animMobileList {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0%);
+    opacity: 1;
+  }
+}
+
+.div__nav-list {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  background: linear-gradient(
+    to left,
+    rgba(110, 46, 165, 0.8) 40%,
+    rgba(67, 51, 167, 0.9) 110%
+  );
+  animation: animMobileList 0.4s ease forwards;
+}
+
+.nav-list {
+  margin-top: 110px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.btn-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 48px;
+  background: linear-gradient(350deg, #aa2a87 30%, #b8b22e 110%);
+  border: none;
+  padding: 0px 10px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 5px rgba(1, 1, 1, 0.2);
+}
+
+.nav-item {
+  width: 100%;
+  text-align: start;
+  color: white;
+  font-size: 32px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.4s ease;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  text-transform: uppercase;
+}
+
+.nav-item-active {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  // background: linear-gradient(350deg, #c057a3 30%, #d6d160 110%);
+  background: linear-gradient(350deg, #aa2a87 30%, #b8b22e 110%);
+  color: white;
+  transition: 0.4s ease;
+  cursor: default;
+}
+
+.none {
+  display: none;
+}

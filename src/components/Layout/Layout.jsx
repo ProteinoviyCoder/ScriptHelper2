@@ -4,6 +4,9 @@ import { Footer } from "../Footer/Footer";
 import { ModalWindow } from "../ModalWindow/ModalWindow.jsx";
 import { MyImg } from "../MyImg/MyImg.jsx";
 import { Alert } from "../Alert/Alert.jsx";
+import { SideBar } from "../SideBar/SideBar.jsx";
+import { MobileNavList } from "../MobileNavList/MobileNavList.jsx";
+import { useState } from "react";
 
 export function Layout({
   children,
@@ -15,9 +18,15 @@ export function Layout({
   showImgFull,
   setShowImgFull,
 }) {
+  const [switchVisibleMobileList, setSwitchVisibleMobileList] = useState(false);
   return (
     <div className={styles.wrapper}>
-      <Header headerPosition={styles.header}></Header>
+      <Header
+        headerPosition={styles.header}
+        setSwitchVisibleMobileList={setSwitchVisibleMobileList}
+        switchVisibleMobileList={switchVisibleMobileList}
+      ></Header>
+      <SideBar></SideBar>
       {children}
       <Alert></Alert>
       <Footer
@@ -34,6 +43,10 @@ export function Layout({
         showImgFull={showImgFull}
         setShowImgFull={setShowImgFull}
       ></MyImg>
+      <MobileNavList
+        switchVisible={switchVisibleMobileList}
+        setSwitchVisibleMobileList={setSwitchVisibleMobileList}
+      ></MobileNavList>
     </div>
   );
 }

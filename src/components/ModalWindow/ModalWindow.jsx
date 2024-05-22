@@ -32,7 +32,7 @@ function InitialModalWindow({
     >
       <div className={`${styles["modal-window"]} anim-open-window`}>
         <div className={styles["top__modal"]}>
-          <h2 className={styles["title__modal"]}>liDERA</h2>
+          <h2 className={styles["title__modal"]}>Script-Helper</h2>
           <button
             ref={refBtnClose}
             onClick={(e) => closeWindow(e)}
