@@ -515,6 +515,7 @@ export const componentsForCopy = {
     </div>
 
     <script>
+      let isDisabled841 = false;
       // Тут нужно вставить путь до картинки, *ПУТЬ НАДО ВСТАВЛЯТЬ ОТНОСИТЕЛЬНО ФАЙЛА index.html*
       const myImagesForSlider831 = [
         "./img/slide1.jpg",
@@ -549,6 +550,9 @@ export const componentsForCopy = {
       window.addEventListener("resize", updateSliderPosition831);
 
       nextBtn831.addEventListener("click", function () {
+        if (isDisabled841) return;
+
+        isDisabled841 = true;
         if (countSlide831 < myImagesForSlider831.length - 1) {
           const widthSlide =
             document.querySelector(".my-slide-841").offsetWidth;
@@ -559,9 +563,15 @@ export const componentsForCopy = {
           contentSlider831.scrollTo({ left: 0, behavior: "smooth" });
           countSlide831 = 0;
         }
+        setTimeout(() => {
+          isDisabled841 = false;
+        }, 800);
       });
 
       prevBtn831.addEventListener("click", function () {
+        if (isDisabled841) return;
+
+        isDisabled841 = true;
         if (countSlide831 > 0) {
           const widthSlide =
             document.querySelector(".my-slide-841").offsetWidth;
@@ -578,6 +588,9 @@ export const componentsForCopy = {
           contentSlider831.scrollTo({ left: allWidth, behavior: "smooth" });
           countSlide831 = myImagesForSlider831.length - 1;
         }
+        setTimeout(() => {
+          isDisabled841 = false;
+        }, 800);
       });
     </script>
   </div>`,
