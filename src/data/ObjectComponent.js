@@ -279,7 +279,7 @@ export const componentsForCopy = {
         required=""
         class="my-input-form-732"
       />
-      <button class="my-button-form-732">ORDER</button>
+      <button type="submit" class="my-button-form-732">ORDER</button>
     </form>
     <!-- ------------------------------- Скрипты ---------------------------------------- -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -376,7 +376,7 @@ export const componentsForCopy = {
       required=""
       class="my-input-form-733"
     />
-    <button class="my-button-form-733">ORDER</button>
+    <button type="submit" class="my-button-form-733">ORDER</button>
   </form>
   <!-- ------------------------------- Скрипты ---------------------------------------- -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
