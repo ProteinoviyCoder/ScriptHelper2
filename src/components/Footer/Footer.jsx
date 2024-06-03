@@ -49,7 +49,7 @@ function InitialFooter({ footerStyle, footerSetings }) {
         >
           <i ref={iconArrow}></i>
         </button>
-        <Stopwatch></Stopwatch>
+        {/* <Stopwatch></Stopwatch> */}
       </div>
     </footer>
   );
