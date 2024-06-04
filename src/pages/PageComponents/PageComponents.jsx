@@ -113,6 +113,17 @@ function InitialPageComponents() {
         return (
           <div key={elem.name} className={styles["div-components-forms"]}>
             <div className={styles["div-components-forms-item"]}>
+              {ExampleForms.form4()}
+              <Button
+                onClick={(e) => {
+                  copyText(componentsForCopy.forms.form4, e.target.textContent);
+                }}
+              >
+                Получить Form
+              </Button>
+            </div>
+
+            <div className={styles["div-components-forms-item"]}>
               {ExampleForms.form3()}
               <Button
                 onClick={(e) => {

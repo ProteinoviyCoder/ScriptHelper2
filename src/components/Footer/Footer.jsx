@@ -42,7 +42,7 @@ function InitialFooter({ footerStyle, footerSetings }) {
           {footerSetings ? footerSetings.rightContent : <div></div>}
         </div>
       </div>
-      <></>
+
       {/* <div ref={divTaskTimerRef} className={styles["div-timer-task"]}>
         <button
           onClick={(e) => openTimerTask(e)}

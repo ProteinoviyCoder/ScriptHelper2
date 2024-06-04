@@ -164,4 +164,51 @@ export const ExampleForms = {
       </>
     );
   },
+  form4() {
+    return (
+      <>
+        <form
+          className={styles["my-form-1122"]}
+          action="../~@replacingTheContentsThis_successful"
+          method="POST"
+        >
+          <p className={styles["my-title-form-1122"]}>
+            CHANGE YOUR LIFE TODAY!
+          </p>
+          <hr className={styles["my-hr-form-1122"]} />
+          <input
+            name="first_name"
+            type="text"
+            placeholder="First_name"
+            required=""
+            className={styles["my-input-form-1122"]}
+          />
+          <input
+            name="last_name"
+            type="text"
+            placeholder="Last_name"
+            required=""
+            className={styles["my-input-form-1122"]}
+          />
+          <input
+            name="phone"
+            type="tel"
+            placeholder="Phone"
+            required=""
+            className={styles["my-input-form-1122"]}
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            required=""
+            className={styles["my-input-form-1122"]}
+          />
+          <button type="submit" className={styles["my-button-form-1122"]}>
+            NEXT
+          </button>
+        </form>
+      </>
+    );
+  },
 };

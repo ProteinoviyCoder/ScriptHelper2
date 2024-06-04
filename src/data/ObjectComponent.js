@@ -389,6 +389,124 @@ export const componentsForCopy = {
     });
   </script>
 </div>`,
+    form4: `<div class="my-div-form-1122">
+    <style>
+      .my-div-form-1122 {
+        padding: 5px 10px !important;
+      }
+      .my-form-1122 * {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .my-form-1122 {
+        width: 100% !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        margin: 15px auto !important;
+        max-width: 450px !important;
+        background-color: white !important;
+        border-radius: 10px !important;
+        box-shadow: 0 0 5px 4px rgba(1, 1, 1, 0.3) !important;
+      }
+      .my-title-form-1122 {
+        background-color: #60359c !important;
+        color: white !important;
+        font-weight: 600 !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding: 20px 0px !important;
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+        margin-bottom: 25px !important;
+        font-size: 22px !important;
+      }
+      .my-hr-form-1122 {
+        border: 2px solid #60359c !important;
+        width: 85% !important;
+        margin-bottom: 25px !important;
+        border-radius: 100px !important;
+      }
+      .my-input-form-1122 {
+        width: 81% !important;
+        margin-bottom: 15px !important;
+        padding: 10px !important;
+        font-weight: 600 !important;
+        font-size: 17px !important;
+        border: 1px solid rgb(206, 206, 206) !important;
+        border-radius: 10px !important;
+        outline: none !important;
+      }
+      .my-button-form-1122 {
+        background-color: #60359c !important;
+        width: 85% !important;
+        padding: 19px 10px !important;
+        border: none !important;
+        color: white !important;
+        font-size: 20px !important;
+        font-weight: 600 !important;
+        border-radius: 10px !important;
+        margin-bottom: 40px !important;
+        margin-top: 10px !important;
+        cursor: pointer !important;
+        transition: 0.4s ease !important;
+      }
+      .my-button-form-1122:hover {
+        transform: scale(0.97) !important;
+        transition: 0.4s ease !important;
+      }
+    </style>
+
+    <form
+      class="my-form-1122"
+      action="../~@replacingTheContentsThis_successful"
+      method="POST"
+    >
+      <p class="my-title-form-1122">CHANGE YOUR LIFE TODAY!</p>
+      <hr class="my-hr-form-1122" />
+      <input
+        name="first_name"
+        type="text"
+        placeholder="First_name"
+        required=""
+        class="ss my-input-form-1122"
+      />
+      <input
+        name="last_name"
+        type="text"
+        placeholder="Last_name"
+        required=""
+        class="ss my-input-form-1122"
+      />
+      <input
+        name="phone"
+        type="tel"
+        placeholder="Phone"
+        required=""
+        class="pp my-input-form-1122"
+      />
+      <input
+        name="email"
+        type="email"
+        placeholder="Email"
+        required=""
+        class="my-input-form-1122"
+      />
+      <button type="submit" class="my-button-form-1122">NEXT</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+      $(".ss").on("input", function (e) {
+        this.value = this.value.replace(/[^a-zA-ZáéíñóúüÁÉÍÑÓÚÜ\s.]/g, "");
+      });
+      $(".pp").on("input", function (e) {
+        this.value = "+" + this.value.replace(/[^0-9\.]/g, "");
+      });
+    </script>
+  </div>`,
     slider1: `<div class="my-div-slider-841">
     <style>
       .my-div-slider-841 {

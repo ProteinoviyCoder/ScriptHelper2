@@ -194,3 +194,68 @@
   transform: scale(0.96) !important;
   transition: 0.5s ease !important;
 }
+
+// --------------------------------- форма4 --------------------------------------
+.my-form-1122 * {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.my-form-1122 {
+  font-family: Arial, Helvetica, sans-serif !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+
+  margin: 15px auto !important;
+  width: 100%;
+  max-width: 450px !important;
+  background-color: white !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 5px 4px rgba(1, 1, 1, 0.3) !important;
+}
+.my-title-form-1122 {
+  background-color: #60359c !important;
+  color: white !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  width: 100% !important;
+  padding: 20px 0px !important;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  margin-bottom: 25px !important;
+  font-size: 22px !important;
+}
+.my-hr-form-1122 {
+  border: 2px solid #60359c !important;
+  width: 85% !important;
+  margin-bottom: 25px !important;
+  border-radius: 100px !important;
+}
+.my-input-form-1122 {
+  width: 81% !important;
+  margin-bottom: 15px !important;
+  padding: 10px !important;
+  font-weight: 600 !important;
+  font-size: 17px !important;
+  border: 1px solid rgb(206, 206, 206) !important;
+  border-radius: 10px !important;
+  outline: none !important;
+}
+.my-button-form-1122 {
+  background-color: #60359c !important;
+  width: 85% !important;
+  padding: 19px 10px !important;
+  border: none !important;
+  color: white !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  margin-bottom: 40px !important;
+  margin-top: 10px !important;
+  cursor: pointer !important;
+  transition: 0.4s ease !important;
+}
+.my-button-form-1122:hover {
+  transform: scale(0.97) !important;
+  transition: 0.4s ease !important;
+}
