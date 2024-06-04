@@ -175,7 +175,6 @@ export const ExampleForms = {
           <p className={styles["my-title-form-1122"]}>
             CHANGE YOUR LIFE TODAY!
           </p>
-          <hr className={styles["my-hr-form-1122"]} />
           <input
             name="first_name"
             type="text"

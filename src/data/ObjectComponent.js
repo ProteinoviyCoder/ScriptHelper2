@@ -420,15 +420,10 @@ export const componentsForCopy = {
         padding: 20px 0px !important;
         border-top-left-radius: 10px !important;
         border-top-right-radius: 10px !important;
-        margin-bottom: 25px !important;
+        margin-bottom: 40px !important;
         font-size: 22px !important;
       }
-      .my-hr-form-1122 {
-        border: 2px solid #60359c !important;
-        width: 85% !important;
-        margin-bottom: 25px !important;
-        border-radius: 100px !important;
-      }
+      
       .my-input-form-1122 {
         width: 81% !important;
         margin-bottom: 15px !important;
@@ -465,7 +460,7 @@ export const componentsForCopy = {
       method="POST"
     >
       <p class="my-title-form-1122">CHANGE YOUR LIFE TODAY!</p>
-      <hr class="my-hr-form-1122" />
+      
       <input
         name="first_name"
         type="text"
