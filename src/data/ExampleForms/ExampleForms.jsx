@@ -204,7 +204,7 @@ export const ExampleForms = {
             className={styles["my-input-form-1122"]}
           />
           <button type="submit" className={styles["my-button-form-1122"]}>
-            NEXT
+            ORDER
           </button>
         </form>
       </>
