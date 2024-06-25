@@ -203,7 +203,13 @@ export const ExampleForms = {
             required=""
             className={styles["my-input-form-1122"]}
           />
-          <button type="submit" className={styles["my-button-form-1122"]}>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+            }}
+            type="submit"
+            className={styles["my-button-form-1122"]}
+          >
             ORDER
           </button>
         </form>
