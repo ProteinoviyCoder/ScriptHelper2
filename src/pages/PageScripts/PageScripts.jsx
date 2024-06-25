@@ -244,12 +244,12 @@ function InitialPageScripts() {
       favorite: false,
     },
     {
-      name: "Тег <video> для корректного отображения на всех девайсах",
+      name: "Тег <video>",
       versions: [
         {
           v: 1,
           description:
-            "По кнопке получаем готовый тег <video> \n :;: \n Меняем src в <vedeo> и <source> \n :;: \n Меняем type в <source> если используем другой тип видео \n :;: \n Меняем preload в <video>, если нужна картинка-заставка на видео",
+            "По кнопке получаем готовый тег <video> \n :;: \n . \n :;: \n Меняем src в <vedeo> и <source> \n :;: \n . \n :;: \n Меняем type в <source> если используем другой тип видео \n :;: \n . \n :;: \n Меняем preload в <video>, если нужна картинка-заставка на видео",
           buttons: [
             {
               buttonText: "Получить <video>",
