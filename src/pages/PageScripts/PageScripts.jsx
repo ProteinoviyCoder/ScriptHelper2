@@ -178,7 +178,7 @@ function InitialPageScripts() {
       versions: [
         {
           v: 1,
-          description: "Макросы для Stelldata",
+          description: "Макросы для CRM",
           buttons: [
             {
               buttonText: "Получить {{@Offer.name}}",
