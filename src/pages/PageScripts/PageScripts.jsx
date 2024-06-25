@@ -173,6 +173,76 @@ function InitialPageScripts() {
       ],
       favorite: false,
     },
+    {
+      name: "Macros",
+      versions: [
+        {
+          v: 1,
+          description: "Макросы для Stelldata",
+          buttons: [
+            {
+              buttonText: "Получить {{@Offer.name}}",
+              script: "{{@Offer.name}}",
+            },
+            {
+              buttonText: "Получить {{@Offer.productImage}}",
+              script: "{{@Offer.productImage}}",
+            },
+            {
+              buttonText: "Получить {{@Currency}}",
+              script: "{{@Currency}}",
+            },
+            {
+              buttonText: "Получить <?=$offerUrl?>",
+              script: "<?=$offerUrl?>",
+            },
+            {
+              buttonText: "Получить action и method",
+              script:
+                "action='../~@replacingTheContentsThis_successful' method='POST'",
+            },
+          ],
+        },
+        {
+          v: 2,
+          description: "Макросы для AIO",
+          buttons: [
+            {
+              buttonText: "Получить {{link}}",
+              script: "{{link}}",
+            },
+            {
+              buttonText: "Получить {{form}}",
+              script: "{{form}}",
+            },
+            {
+              buttonText: "Получить {{aio}}",
+              script: "{{aio}}",
+            },
+          ],
+        },
+      ],
+      favorite: false,
+    },
+    {
+      name: "Script IMask",
+      versions: [
+        {
+          v: 1,
+          description:
+            "По кнопке получаем сразу и ссылку cdn и скрипт с ограничителем длины",
+          buttons: [
+            {
+              buttonText: "Получить IMask",
+              script: `<script src="https://unpkg.com/imask"></script>
+
+              <script>var elements = document.querySelectorAll('input[name="phone"]');      elements.forEach(function(element) {         var maskOptions = {           mask: '+{33}000000000000'         };         var mask = IMask(element, maskOptions);      });</script>`,
+            },
+          ],
+        },
+      ],
+      favorite: false,
+    },
   ];
 
   const [whatIsScriptGroup, setWhatIsScriptGroup] = useState("");
