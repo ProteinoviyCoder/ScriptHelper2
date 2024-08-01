@@ -90,6 +90,10 @@ function InitialPageGeneral() {
             <p className={styles["title__page-content"]}>Общая информация</p>
             <div className={styles["core-text__page-content"]}>
               <p className={styles["part-text"]}>
+                Готовая видео-прокла: Sweetrelief DTC NEW_Joints - US -
+                JointBarbaraVid1v2
+                <br />
+                <br />
                 Всегда нужно проверять: <br />
                 <br />
                 - название офера по всей прокле <br />

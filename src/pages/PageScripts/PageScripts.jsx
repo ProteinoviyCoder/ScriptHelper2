@@ -193,6 +193,14 @@ function InitialPageScripts() {
               script: "{{@Currency}}",
             },
             {
+              buttonText: "Получить {{@Price.new}}",
+              script: "{{@Price.new}}",
+            },
+            {
+              buttonText: "Получить {{@Price.old}}",
+              script: "{{@Price.old}}",
+            },
+            {
               buttonText: "Получить <?=$offerUrl?>",
               script: "<?=$offerUrl?>",
             },
@@ -249,7 +257,7 @@ function InitialPageScripts() {
         {
           v: 1,
           description:
-            "По кнопке получаем готовый тег <video> \n :;: \n . \n :;: \n Меняем src в <vedeo> и <source> \n :;: \n . \n :;: \n Меняем type в <source> если используем другой тип видео \n :;: \n . \n :;: \n Меняем preload в <video>, если нужна картинка-заставка на видео",
+            "По кнопке получаем готовый тег <video> \n :;: \n . \n :;: \n Меняем src в <vedeo> и <source> \n :;: \n . \n :;: \n Меняем type в <source> если используем другой тип видео \n :;: \n . \n :;: \n Меняем poster в <video>, если нужна картинка-заставка на видео",
           buttons: [
             {
               buttonText: "Получить <video>",
@@ -265,6 +273,87 @@ function InitialPageScripts() {
                                         type="video/mp4; codecs=vp8,vorbis"
                                       />
                         </video>`,
+            },
+          ],
+        },
+      ],
+      favorite: false,
+    },
+    {
+      name: "Тег <video>",
+      versions: [
+        {
+          v: 1,
+          description:
+            "Скрипт для замены, на проклы где ключевые слова под комментами подтягиваются по @...",
+          buttons: [
+            {
+              buttonText: "Получить Script",
+              script: `<script>
+          var $data_now = "Adesso",
+            $like = "Mi piace",
+            $answer = "Rispondi",
+            $yet = "Altro",
+            $answered = "ha risposto",
+            $hours = "o.";
+
+          document.addEventListener("DOMContentLoaded", function () {
+            function updateTextContent(selector, text) {
+              document.querySelectorAll(selector).forEach(function (element) {
+                element.innerText = text;
+              });
+            }
+
+            function updateComponentReposy() {
+              updateTextContent(".component_reposy b", $data_now);
+              updateTextContent(".component_reposy nav:nth-child(2)", $like);
+              updateTextContent(".component_reposy nav:nth-child(3)", $answer);
+              updateTextContent(".component_reposy nav:nth-child(4)", $yet);
+            }
+
+            function updateComments() {
+              var comments = document.querySelectorAll(
+                "#comments_component .item"
+              );
+              var lastNonUserRequestTime = 1;
+
+              comments.forEach(function (comment, index) {
+                if (index < 5) {
+                  comment.querySelector(".component_reposy b").innerText =
+                    $data_now;
+                } else {
+                  var parentDiv = comment.closest("div");
+
+                  if (
+                    parentDiv &&
+                    parentDiv.classList.contains("user_request")
+                  ) {
+                    comment.querySelector(".component_reposy b").innerText =
+                      lastNonUserRequestTime + " " + $hours;
+                  } else {
+                    lastNonUserRequestTime = index - 4;
+                    comment.querySelector(".component_reposy b").innerText =
+                      lastNonUserRequestTime + " " + $hours;
+                  }
+                }
+              });
+            }
+
+            updateComponentReposy();
+            updateComments();
+          });
+
+          const links = document.querySelectorAll(
+            ".component_reposy, .component_name"
+          );
+          const form = document.querySelector("#form");
+
+          links.forEach((elem) => {
+            elem.addEventListener("click", function () {
+              form.scrollIntoView({ behavior: "smooth" });
+            });
+          });
+        </script>`,
             },
           ],
         },
