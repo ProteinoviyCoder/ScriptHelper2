@@ -118,7 +118,7 @@ Error generating stack: `+o.message+`
                                         src="./media/video.mp4"
                                         type="video/mp4; codecs=vp8,vorbis"
                                       />
-                        </video>`}]}],favorite:!1},{name:"Тег <video>",versions:[{v:1,description:"Скрипт для замены, на проклы где ключевые слова под комментами подтягиваются по @...",buttons:[{buttonText:"Получить Script",script:`<script>
+                        </video>`}]}],favorite:!1},{name:"Скрипт для комментов",versions:[{v:1,description:"Скрипт для замены, на проклы где ключевые слова под комментами подтягиваются по @...",buttons:[{buttonText:"Получить Script",script:`<script>
           var $data_now = "Adesso",
             $like = "Mi piace",
             $answer = "Rispondi",
