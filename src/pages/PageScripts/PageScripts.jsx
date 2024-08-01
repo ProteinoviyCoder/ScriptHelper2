@@ -280,7 +280,7 @@ function InitialPageScripts() {
       favorite: false,
     },
     {
-      name: "Тег <video>",
+      name: "Скрипт для комментов",
       versions: [
         {
           v: 1,
