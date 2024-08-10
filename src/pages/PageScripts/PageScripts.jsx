@@ -257,7 +257,7 @@ function InitialPageScripts() {
         {
           v: 1,
           description:
-            "По кнопке получаем готовый тег <video> \n :;: \n . \n :;: \n Меняем src в <vedeo> и <source> \n :;: \n . \n :;: \n Меняем type в <source> если используем другой тип видео \n :;: \n . \n :;: \n Меняем poster в <video>, если нужна картинка-заставка на видео",
+            "По кнопке получаем готовый тег <video> \n :;: \n . \n :;: \n Меняем src в <video> и <source> \n :;: \n . \n :;: \n Меняем type в <source> если используем другой тип видео \n :;: \n . \n :;: \n Меняем poster в <video>, если нужна картинка-заставка на видео",
           buttons: [
             {
               buttonText: "Получить <video>",
