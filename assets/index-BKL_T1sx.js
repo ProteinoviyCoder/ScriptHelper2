@@ -99,7 +99,7 @@ Error generating stack: `+o.message+`
  :;: 
  . 
  :;: 
- Меняем src в <vedeo> и <source> 
+ Меняем src в <video> и <source> 
  :;: 
  . 
  :;: 
