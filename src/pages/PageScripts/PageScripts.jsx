@@ -15,6 +15,18 @@ function InitialPageScripts() {
         {
           v: 1,
           description:
+            "Скрипт на валидацию с JS (новый стандарт): \n . :;: \n Тегу <input> для имени, прописываем класс class='ss' \n :;: \n Тегу <input> для телефона, прописываем класс class='pp'",
+          buttons: [
+            {
+              buttonText: "Получить Script",
+              script:
+                "<script>document.addEventListener('DOMContentLoaded', function () {const ssElements = document.querySelectorAll('.ss');const ppElements = document.querySelectorAll('.pp');// Устанавливаем мин и макс длину номер, в рамках этого диапозона кнопка будет рабочейconst minLengthNumber = 10;const maxlengthNumber = 12;//код страныconst countryCode = '+4047';//Валидация инпутовssElements.forEach((el) => {el.addEventListener('input', () => {el.value = el.value.replace(/[^a-zA-ZáéíñóúüÁÉÍÑÓÚÜs.]/g, '');});});ppElements.forEach((element) => {let isCodeAdded = false;let isFisrtInput = true;element.addEventListener('input', () => {let firstSymbol;if (isFisrtInput) {firstSymbol = element.value.replace(/[^0-9.]/g, '');}element.value = '+' + element.value.replace(/[^0-9.]/g, '');if (!isCodeAdded && element.value.length >= 1) {if (isFisrtInput) {element.value = countryCode + firstSymbol;isFisrtInput = false;} else {element.value = countryCode;}isCodeAdded = true;//указываем длинну кода тсраны, надо чтобы было меньше длины кода, считая +} else if (element.value.length < countryCode.length) {element.value = '';isCodeAdded = false;isFisrtInput = true;}});});//Обрабатываем кнопкиconst submitButtons = document.querySelectorAll('button[type='submit']');submitButtons.forEach((btn) => {btn.style.opacity = '0.5';});submitButtons.forEach((button, index) => {const phoneInput = ppElements[index];button.disabled = true;phoneInput.addEventListener('input', () => {if (phoneInput.value.length >= minLengthNumber &&phoneInput.value.length <= maxlengthNumber) {button.disabled = false;button.style.opacity = '1';} else {button.disabled = true;button.style.opacity = '0.5';}});});});</script>",
+            },
+          ],
+        },
+        {
+          v: 2,
+          description:
             "Скрипт валидация на jQuery: \n . :;: \n Тегу <input> для имени, прописываем класс class='ss' \n :;: \n Тегу <input> для телефона, прописываем класс class='pp'",
           buttons: [
             {
@@ -30,7 +42,7 @@ function InitialPageScripts() {
           ],
         },
         {
-          v: 2,
+          v: 3,
           description:
             "Скрипт валидация на jQuery с авто-вводом кода телефона: \n . :;: \n Тегу <input> для имени, прописываем класс class='ss' \n :;: \n Тегу <input> для телефона, прописываем класс class='pp' \n . :;: \n Меняем в скрипте +90 на нужное значение",
           buttons: [
@@ -55,6 +67,22 @@ function InitialPageScripts() {
       versions: [
         {
           v: 1,
+          description: `Скрипт на скролл с JS (новый стандарт): \n . :;: \n 
+          Константу myHref нужно поменять в соответствии с id у последнего тега <form>.\n . :;: \n 
+          Для скролла необходимо обернуть нужный элемент в тег <a> или задать нужному элементу класс .my-scroll.\n . :;: \n \n . :;: \n 
+          Всем элементам с классом .my-scroll присваивается стиль курсор-поинтер. Если нужно, уберите из скрипта строку - link.style.cursor = "pointer";\n . :;: \n 
+          Всем тегам <a> присваивается значение href, указанное в константе myHref. Если это мешает, удалите из скрипта строку - link.href = \`#\${myHref}\`;\n . :;: \n 
+          Если нужно отрегулировать высоту отступа от нижней границы формы до нижней границы видимого окна пользователя, вы можете поменять число в константе scrollToPosition (по умолчанию стоит число 60)`,
+          buttons: [
+            {
+              buttonText: "Получить Script",
+              script:
+                "<script>document.addEventListener('DOMContentLoaded', function () {const myHref = 'form-wrap';const lastForm = document.querySelector(`#${myHref}`);const allLinks = document.querySelectorAll('a');const elemsForScroll = document.querySelectorAll('.my-scroll');const stylesForBehavior = `<style>html { scroll-behavior: smooth; }</style>`;document.body.insertAdjacentHTML('beforeend', stylesForBehavior);[...allLinks, ...elemsForScroll]?.forEach((link) => {if (link.tagName === 'A' || link.hasAttribute('href')) {link.href = `#${myHref}`;}if (link.tagName !== 'A') {link.style.cursor = 'pointer';}link.addEventListener('click', function (e) {e.preventDefault();const targetPosition =lastForm.getBoundingClientRect().top + window.scrollY;const windowHeight = window.innerHeight;const targetHeight = lastForm.offsetHeight;const scrollToPosition =targetPosition - windowHeight + targetHeight + 60;window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });});});});</script>",
+            },
+          ],
+        },
+        {
+          v: 2,
           description:
             "Скрипт на скролл с jQuery: \n . :;: \n Последнему тегу <form> прописываем id='form-wrap' \n :;: \n Всем тегам <a> прописываем href='#form-wrap'",
           buttons: [
@@ -71,7 +99,7 @@ function InitialPageScripts() {
           ],
         },
         {
-          v: 2,
+          v: 3,
           description: "Скрипт на скролл ванила JS:",
           buttons: [
             {
@@ -82,7 +110,7 @@ function InitialPageScripts() {
           ],
         },
         {
-          v: 3,
+          v: 4,
           description: "Скрипт на скролл ванила JS v2.0:",
           buttons: [
             {
