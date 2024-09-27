@@ -75,9 +75,9 @@ Error generating stack: `+o.message+`
  :;: 
  Тегу <input> для телефона, прописываем класс class='pp'`,buttons:[{buttonText:"Получить Script",script:"<script>$('.ss').on('input', function(e){this.value = this.value.replace(/[^a-zA-ZáéíñóúüÁÉÍÑÓÚÜ\\s.]/g, '');});$('.pp').on('input', function(e){this.value = '+' + this.value.replace(/[^0-9\\.]/g, '');});<\/script>"},{buttonText:"Получить Jquery",script:"<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'><\/script>"}]},{v:3,description:`Скрипт валидация на jQuery с авто-вводом кода телефона: 
  . :;: 
- Тегу <input> для имени, прописываем класс class='ss' 
+ Тегу <input> для имени, присваиваем класс class='ss' 
  :;: 
- Тегу <input> для телефона, прописываем класс class='pp' 
+ Тегу <input> для телефона, присваиваем класс class='pp' 
  . :;: 
  Меняем в скрипте +90 на нужное значение`,buttons:[{buttonText:"Получить Script",script:"<script>$('.ss').on('input', function (e) {this.value = this.value.replace(/[^a-zA-ZáéíñóúüÁÉÍÑÓÚÜ\\s.]/g, '');});$(function () {$('.pp').one('focus', function () {$(this).val('+90');});});$('.pp').on('input', function (e) {this.value = '+' + this.value.replace(/[^0-9\\.]/g, '');});<\/script>"},{buttonText:"Получить Jquery",script:"<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'><\/script>"}]}],favorite:!1},{name:"Script на скрол",versions:[{v:1,description:`Скрипт на скролл с JS (новый стандарт): 
  . :;: 
