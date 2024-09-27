@@ -5,10 +5,73 @@
     <link rel="icon" type="image/svg+xml" href="/ScriptHelper2/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Script Helper 2</title>
-    <script type="module" crossorigin src="/ScriptHelper2/assets/index-BKL_T1sx.js"></script>
+    <script type="module" crossorigin src="/ScriptHelper2/assets/index-BEqh4H-w.js"></script>
     <link rel="stylesheet" crossorigin href="/ScriptHelper2/assets/index-CIWFhzvE.css">
   </head>
   <body>
     <div id="root"></div>
   </body>
 </html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const ssElements = document.querySelectorAll(".ss");
+    const ppElements = document.querySelectorAll(".pp");
+    // Устанавливаем мин и макс длину номер, в рамках этого диапозона кнопка будет рабочей
+    const minLengthNumber = 10;
+    const maxlengthNumber = 12;
+    //код страны
+    const countryCode = "+4047";
+    //Валидация инпутов
+    ssElements.forEach((el) => {
+      el.addEventListener("input", () => {
+        el.value = el.value.replace(/[^a-zA-ZáéíñóúüÁÉÍÑÓÚÜ\s.]/g, "");
+      });
+    });
+    ppElements.forEach((element) => {
+      let isCodeAdded = false;
+      let isFisrtInput = true;
+      element.addEventListener("input", () => {
+        let firstSymbol;
+        if (isFisrtInput) {
+          firstSymbol = element.value;
+        }
+        element.value = "+" + element.value.replace(/[^0-9\.]/g, "");
+        if (!isCodeAdded && element.value.length >= 1) {
+          if (isFisrtInput) {
+            element.value = countryCode + firstSymbol;
+            isFisrtInput = false;
+          } else {
+            element.value = countryCode;
+            isCodeAdded = true;
+          }
+          //указываем длинну кода тсраны, надо чтобы было меньше длины кода, считая +
+        } else if (element.value.length < countryCode.length) {
+          element.value = "";
+          isCodeAdded = false;
+        }
+      });
+    });
+    //Обрабатываем кнопки
+    const submitButtons = document.querySelectorAll('button[type="submit"]');
+    submitButtons.forEach((btn) => {
+      btn.style.opacity = "0.5";
+    });
+    submitButtons.forEach((button, index) => {
+      const phoneInput = ppElements[index];
+      button.disabled = true;
+      phoneInput.addEventListener("input", () => {
+        if (
+          phoneInput.value.length >= minLengthNumber &&
+          phoneInput.value.length <= maxlengthNumber
+        ) {
+          button.disabled = false;
+          button.style.opacity = "1";
+        } else {
+          button.disabled = true;
+          button.style.opacity = "0.5";
+        }
+      });
+    });
+  });
+</script>
