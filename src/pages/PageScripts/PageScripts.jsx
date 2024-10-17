@@ -14,8 +14,19 @@ function InitialPageScripts() {
       versions: [
         {
           v: 1,
-          description:
-            "Скрипт на валидацию с JS (новый стандарт): \n . :;: \n Тегу <input> для имени, прописываем класс class='ss' \n :;: \n Тегу <input> для телефона, прописываем класс class='pp'",
+          description: `Скрипт на валидацию с JS (новый стандарт): 
+            .\n :;: \n 
+            При загрузке страницы в значение (value) тега <input> с атрибутом name="phone" 
+            добавляется "код телефона" из константы countryCode, и его нельзя удалить\n :;: \n 
+            .\n :;: \n 
+            Тегу <input> для имени, прописываем класс class='ss' \n :;: \n 
+            Тегу <input> для телефона, прописываем класс class='pp' \n :;: \n 
+            .\n :;: \n 
+            Устанавливаем мин и макс длину номера, в рамках этого диапозона кнопка будет рабочей \n :;: \n
+            Для константы minLengthNumber - указываем минимальное кол-во символов \n :;: \n 
+            Для константы maxlengthNumber - указываем максимальное кол-во символов
+            . \n :;: \n 
+            Находим константу countryCode и указываем туда нужный код телефона с плюсом (пример: countryCode = "+34";) `,
           buttons: [
             {
               buttonText: "Получить Script",
@@ -23,10 +34,63 @@ function InitialPageScripts() {
               document.addEventListener('DOMContentLoaded', function () {
               const ssElements = document.querySelectorAll('.ss');const ppElements = document.querySelectorAll('.pp');
               /* Устанавливаем мин и макс длину номер, в рамках этого диапозона кнопка будет рабочей */ 
-              const minLengthNumber = 10;
-              const maxlengthNumber = 12; 
+              const minLengthNumber = 7;
+              const maxlengthNumber = 18; 
               /* код страны */ 
-              const countryCode = '+4047'; 
+              const countryCode = '+34'; 
+              /* Валидация инпутов */ 
+              ssElements.forEach((el) => {el.addEventListener('input', () => 
+                {el.value = el.value.replace(/[^a-zA-ZáéíñóúüÁÉÍÑÓÚÜ\\s.]/g, '');});});
+                
+                ppElements.forEach((element) => {
+                  element.value = countryCode;
+                  element.addEventListener("input", () => {
+                    if (element.value.length < countryCode.length) {
+                      element.value = "";
+                      element.value = countryCode;
+                    }
+                    element.value = "+" + element.value.replace(/[^0-9\\.]/g, "");
+                  });
+                });
+                  
+                  /* Обрабатываем кнопки */ const submitButtons = document.querySelectorAll('button[type="submit"]');
+                  submitButtons.forEach((btn) => {btn.style.opacity = '0.5';});
+                  submitButtons.forEach((button, index) => {const phoneInput = ppElements[index];
+                  button.disabled = true;phoneInput.addEventListener('input', () => {
+                    if (phoneInput.value.length >= minLengthNumber &&phoneInput.value.length <= maxlengthNumber) 
+                    {button.disabled = false;button.style.opacity = '1';} else {button.disabled = true;button.style.opacity = '0.5';}
+                  });});});
+                  </script>`,
+            },
+          ],
+        },
+        {
+          v: 2,
+          description: `Скрипт на валидацию с JS (новый стандарт): 
+            .\n :;: \n 
+            При событии input для тега <input> с атрибутом name="phone", в значение (value) 
+            этого тега добавляется "код телефона" из константы countryCode\n :;: \n 
+            При попытке стереть "код телефона" удаляется всё значение
+            .\n :;: \n 
+            Тегу <input> для имени, прописываем класс class='ss' \n :;: \n 
+            Тегу <input> для телефона, прописываем класс class='pp' \n :;: \n 
+            .\n :;: \n 
+            Устанавливаем мин и макс длину номера, в рамках этого диапозона кнопка будет рабочей \n :;: \n
+            Для константы minLengthNumber - указываем минимальное кол-во символов \n :;: \n 
+            Для константы maxlengthNumber - указываем максимальное кол-во символов
+            . \n :;: \n 
+            Находим константу countryCode и указываем туда нужный код телефона с плюсом (пример: countryCode = "+34";) `,
+          buttons: [
+            {
+              buttonText: "Получить Script",
+              script: `<script>
+              document.addEventListener('DOMContentLoaded', function () {
+              const ssElements = document.querySelectorAll('.ss');const ppElements = document.querySelectorAll('.pp');
+              /* Устанавливаем мин и макс длину номер, в рамках этого диапозона кнопка будет рабочей */ 
+              const minLengthNumber = 7;
+              const maxlengthNumber = 18; 
+              /* код страны */ 
+              const countryCode = '+34'; 
               /* Валидация инпутов */ 
               ssElements.forEach((el) => {el.addEventListener('input', () => 
                 {el.value = el.value.replace(/[^a-zA-ZáéíñóúüÁÉÍÑÓÚÜ\\s.]/g, '');});});
@@ -38,7 +102,7 @@ function InitialPageScripts() {
           ],
         },
         {
-          v: 2,
+          v: 3,
           description:
             "Скрипт валидация на jQuery: \n . :;: \n Тегу <input> для имени, прописываем класс class='ss' \n :;: \n Тегу <input> для телефона, прописываем класс class='pp'",
           buttons: [
@@ -55,7 +119,7 @@ function InitialPageScripts() {
           ],
         },
         {
-          v: 3,
+          v: 4,
           description:
             "Скрипт валидация на jQuery с авто-вводом кода телефона: \n . :;: \n Тегу <input> для имени, присваиваем класс class='ss' \n :;: \n Тегу <input> для телефона, присваиваем класс class='pp' \n . :;: \n Меняем в скрипте +90 на нужное значение",
           buttons: [

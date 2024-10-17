@@ -17,6 +17,9 @@ function InitialScript({
 }) {
   const { showAlert, setShowAlert } = useMyContext();
 
+  const [isOpenDescriptionOfScript, setIsOpenDescriptionOfScript] =
+    useState(false);
+
   const [version, setVersion] = useState(1);
   const [flagAnim, setFlagAnim] = useState(false);
 
@@ -199,11 +202,34 @@ function InitialScript({
           })}
         </div>
         <hr />
-        <div ref={refText} className={styles["script-text"]}>
+        <div
+          ref={refText}
+          className={`${styles["script-text"]} ${
+            !isOpenDescriptionOfScript &&
+            splitString(scriptOne.versions[version - 1].description).length > 1
+              ? styles["script-text-max-height"]
+              : ""
+          }`}
+        >
           {splitString(scriptOne.versions[version - 1].description).map(
             (partText) => {
               return <p key={partText.id}>{partText.text}</p>;
             }
+          )}
+          {splitString(scriptOne.versions[version - 1].description).length >
+            1 && (
+            <button
+              onClick={() =>
+                setIsOpenDescriptionOfScript(!isOpenDescriptionOfScript)
+              }
+              className={
+                isOpenDescriptionOfScript
+                  ? styles["btn-gradient-open"]
+                  : styles["btn-gradient-close"]
+              }
+            >
+              a
+            </button>
           )}
         </div>
         <hr />
